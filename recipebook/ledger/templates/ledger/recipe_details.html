@@ -1,18 +1,15 @@
-<html>
-    <head>
-        <title>Recipe Book</title>
-    </head>
-    <body>
-        <h1>Recipe Book</h1>
-        <ul>
-            <li>
-                <h2>{{ name }}</h2>
-                <ul>
-                    {% for ingredient in ingredients %}
-                        <li>{{ ingredient.name }} - {{ ingredient.quantity }}</li>
-                    {% endfor %}
-                </ul>
-            </li>
-        </ul>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ object.name }} Detail</title>
+</head>
+<body>
+    <h1>{{ object.name }} Detail</h1>
+    <h2>Ingredients:</h2>
+    <ul>
+        {% for ingredient in object.ingredients.all %}
+            <li>{{ ingredient.quantity }} of {{ ingredient.ingredient.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
 </html>
