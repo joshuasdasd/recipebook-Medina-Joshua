@@ -16,4 +16,4 @@ class RecipeDetailView(LoginRequiredMixin, DetailView):
     template_name = 'ledger/recipe_details.html'
 
 class CustomLoginView(LoginView):
-    template_name = 'registration/login.html'
+    template_name = 'registration/accounts/login.html'
