@@ -6,6 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, PasswordResetView
 
 
+
 # Create your views here.
 class RecipeListView(ListView):
     model = Recipe
